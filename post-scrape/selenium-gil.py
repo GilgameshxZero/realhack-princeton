@@ -13,7 +13,7 @@ chromeOptions.add_argument('--silent')
 driver = webdriver.Chrome('chromedriver.exe', chrome_options=chromeOptions)
 driver.implicitly_wait(0)
 
-driver.get('https://realtalk-princeton.tumblr.com/page/2700')
+driver.get('https://realtalk-princeton.tumblr.com/page/1')
 
 posts = []
 
