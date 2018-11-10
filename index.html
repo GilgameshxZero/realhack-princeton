@@ -8,12 +8,26 @@
 
 <body>
 
-  <p>Before the script...</p>
+	<p>Before the script...</p>
 
-  <p>...After the script.</p>
+	<p>...After the script.</p>
 
-  <p>message:</p>
-  <p id="message"></p>
+	<p>message:</p>
+	<p id="message"></p>
+
+	<form id="subscribeform" action="/">
+		<label for="tags">Tags</label>
+		<div id="tags">
+			<input type="checkbox" value="tag1">tag1<br>
+			<input type="checkbox" value="tag2">tag2<br>
+			<input type="checkbox" value="emelia">emelia<br>
+		</div>
+
+		<label for="tel">Phone</label>
+		<input type="tel" id="phone" name="phone" placeholder="11111111111" required>
+
+		<input type="submit" value="Subscribe">
+	</form>
 
 </body>
 
@@ -21,6 +35,24 @@
 var message = 'bbbbb';
 lib.betsyp.helloWorld({name: 'world', msg: message}, function(err, result) {});
 $("#message").html(message);
+
+
+$( "#subscribeform" ).submit(function( event ) {
+	event.preventDefault();
+
+	var phone = $('input[name=phone]').val();
+
+	var selectedTags = [];
+	$('#tags input:checked').each(function(){
+	  selectedTags.push($(this).val());
+	});
+
+	lib.betsyp['realhack-princeton']['@dev'].subscribe({phone:phone, tags:selectedTags}, function(err, result){
+		console.log("result: "+result);
+	});
+
+	alert( "subscribing for tags:\n"+selectedTags);
+});
 
 </script>
 
