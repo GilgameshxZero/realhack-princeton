@@ -3,22 +3,24 @@
 
 <head>
 <script src="lib.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
 
   <p>Before the script...</p>
 
-  <script>
-    alert( 'Hello, world!' );
-  </script>
-
   <p>...After the script.</p>
+
+  <p>message:</p>
+  <p id="message"></p>
 
 </body>
 
 <script>
-lib.betsyp.helloWorld('world', function(err, result) {});
+var message = 'bbbbb';
+lib.betsyp.helloWorld({name: 'world', msg: message}, function(err, result) {});
+$("#message").html(message);
 
 </script>
 
