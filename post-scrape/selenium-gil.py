@@ -13,7 +13,7 @@ chromeOptions.add_argument('--silent')
 driver = webdriver.Chrome('chromedriver.exe', chrome_options=chromeOptions)
 driver.implicitly_wait(0)
 
-driver.get('https://realtalk-princeton.tumblr.com/')
+driver.get('https://realtalk-princeton.tumblr.com')
 
 posts = []
 
@@ -31,10 +31,10 @@ while True:
         print(answer)
         posts.append([date, question, answer])
 
-    next = driver.find_element_by_id('next')
-    if next == None:
+    next = driver.find_elements_by_id('next')
+    if len(next) == 0:
         break
-    next.click()
+    next[0].click()
 
 driver.close()
 
