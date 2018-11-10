@@ -8,20 +8,17 @@
 
 <body>
 
-	<p>Before the script...</p>
+	<h1>Subscribe for tags!</h1>
 
-	<p>...After the script.</p>
-
-	<p>message:</p>
-	<p id="message"></p>
-
-	<form id="subscribeform" action="/">
+	<form id="subscribeform" action="done.html">
 		<label for="tags">Tags</label>
 		<div id="tags">
 			<input type="checkbox" value="tag1">tag1<br>
 			<input type="checkbox" value="tag2">tag2<br>
 			<input type="checkbox" value="emelia">emelia<br>
 		</div>
+
+		<br>
 
 		<label for="tel">Phone</label>
 		<input type="tel" id="phone" name="phone" placeholder="11111111111" required>
@@ -32,13 +29,9 @@
 </body>
 
 <script>
-var message = 'bbbbb';
-lib.betsyp.helloWorld({name: 'world', msg: message}, function(err, result) {});
-$("#message").html(message);
-
 
 $( "#subscribeform" ).submit(function( event ) {
-	event.preventDefault();
+	// event.preventDefault();
 
 	var phone = $('input[name=phone]').val();
 
