@@ -13,7 +13,7 @@ chromeOptions.add_argument('--silent')
 driver = webdriver.Chrome('chromedriver.exe', chrome_options=chromeOptions)
 driver.implicitly_wait(0)
 
-driver.get('https://realtalk-princeton.tumblr.com')
+driver.get('https://realtalk-princeton.tumblr.com/page/2700')
 
 posts = []
 
@@ -39,5 +39,5 @@ while True:
 driver.close()
 
 # dump posts as json
-with open('posts.json', 'w') as outfile:
-    json.dump(posts, outfile)
+with open('posts.json', 'w', encoding='utf8') as outfile:
+    json.dump(posts, outfile, ensure_ascii=False)
