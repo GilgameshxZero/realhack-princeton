@@ -6,7 +6,6 @@ function sky(){
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
         $(".skyline").removeClass("skyline-collapse");
-        console.log("displayed skyline");
     }
 }
 function divHeight(){
@@ -19,8 +18,6 @@ function divHeight(){
         document.getElementById('how-div-3').style.height = h3;
         h1 = $('#chal-img-1').css("height");
         h2 = $('#chal-img-2').css("height");
-        document.getElementById('chal-div-1').style.height = h1;
-        document.getElementById('chal-div-2').style.height = h2;
     }
     else {
         h1 = $('#how-child-1').css("height");
