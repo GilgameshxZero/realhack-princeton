@@ -13,10 +13,18 @@ body {
     background-size: cover;
     -o-background-size: cover;
 }
-h4{
+h4
+{
     font-size: 16px;
-    color:#f1a852;
 }
+
+h5
+{
+    font-size: 20px !important;
+    color:#f1a852 !important;
+    font-weight: bolder !important;
+}
+
 p {
     font-size: 18px;
     line-height: 1.1;
@@ -342,8 +350,6 @@ footer{
 	top:1px;
 }
 
-        
-}
 
 .one-third 
 {
