@@ -1,52 +1,189 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-<script src="lib.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>Real Talk Subscription</title>
+    
+	<meta charset="utf-8">
+	<meta name="description" content="Envision City is a...">
+	<meta name="keywords" content="envision,city">
+	<meta name="author" content="Edward">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="css/animate-custom.css" rel="stylesheet">
+	<link href="css/realtalk-styles.css" rel="stylesheet">
+	<!-- Custom Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    <script src="lib.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+	<script src="js/realtalk-js.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+		$(document).ready(function(){
+			console.log("Document ready");
+			sky();
+			divHeight();
+		});
+	</script>
+
 </head>
 
-<body>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	<!-- Navigation -->
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container">
 
-	<h1>Subscribe for tags!</h1>
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+					<i class="fa fa-navicon"></i>
+				</button>
+				<a class="navbar-brand page-scroll" href="#page-top">
+					<i class="fa fa-building-o"></i>
+				</a>
+			</div>
 
-	<form id="subscribeform" action="done.html">
-		<label for="tags">Tags</label>
-		<div id="tags">
-			<input type="checkbox" value="tag1">tag1<br>
-			<input type="checkbox" value="tag2">tag2<br>
-			<input type="checkbox" value="emelia">emelia<br>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+				<ul class="nav navbar-nav">
+					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+					<li class="hidden"><a href="#page-top"></a></li>
+					<li><a class="page-scroll" href="#how-it-works">How it Works</a></li>
+					<li><a class="page-scroll" href="#subscribe">Subscribe</a></li>
+				</ul>
+			</div>
+
 		</div>
+	</nav>
 
+	<!-- Intro Header -->
+	<header class="intro">
+		<div class="diamond">
+			<h1>Real Talk Subscription</h1>
+		</div>
+	</header>
+
+	<div class="skyline skyline-collapse"></div>
+
+	<section id="how-it-works" class="container content-section text-center">
+		<h2>Our Project</h2>
+        <h4>Your Princeton Experience</h4>
+		<h4>One text at a time</h4>
 		<br>
 
-		<label for="tel">Phone</label>
-		<input type="tel" id="phone" name="phone" placeholder="11111111111" required>
+		<div class="col-md-3 col-md-offset-2 col-sm-4 wow fadeInLeft">
+			<img id="how-img-1" src="css/img/about1.jpg" class="how-img img-responsive" />
+		</div>
+		<div id="how-div-1" class="col-md-5 col-sm-8 wow fadeInRight">
+			<div id="how-child-1" class="vertical-center">
+				<h3>Challenge </h3>
+				<h4>There are millions of problems posted on Real Talk Princeton </h4>
+				<p>Insert Temp Text</p>
+			</div>
+		</div>
 
-		<input type="submit" value="Subscribe">
-	</form>
+		`<div class="clearfix"></div>`
 
-</body>
+		<div class="col-md-3 col-md-offset-2 col-md-push-5 col-sm-4 col-sm-push-8 wow fadeInRight">
+			<img id="how-img-2" src="css/img/mouse.jpg" class="how-img img-responsive" />
+		</div>
+		<div id="how-div-2" class="col-md-5 col-md-pull-3 col-sm-8 col-sm-pull-4 wow fadeInLeft">
+			<div id="how-child-2" class="vertical-center">
+				<h3>Choice</h3>
+				<h4>Millions of answers</h4>
+				<h5>Select the sections and topics regarding Princeton Life you want to subscribe to. We'll handle the rest. </h5> 
+			</div>
+		</div>
 
-<script>
+		<div class="clearfix"></div>
 
-$( "#subscribeform" ).submit(function( event ) {
-	// event.preventDefault();
+		<div class="col-md-3 col-md-offset-2 col-sm-4 wow fadeInLeft">
+			<img id="how-img-3" src="css/img/about3.jpg" class="how-img img-responsive" />
+		</div>
+		<div id="how-div-3" class="col-md-5 col-sm-8 wow fadeInRight">
+			<div id="how-child-3" class="vertical-center">
+				<h3>Never Waiting Again</h3>
+				<h4>Insert Temp Text</h4>
+				<p>Insert Temp Text</p>
+			</div>
+		</div>
 
-	var phone = $('input[name=phone]').val();
+	</section>
 
-	var selectedTags = [];
-	$('#tags input:checked').each(function(){
-	  selectedTags.push($(this).val());
-	});
+	<section id="subscribe" class="container content-section text-center">
+		<h2>Subscribe</h2>
+        
+        
+        <form id="subscribeform" action="realtalk.html">
+            <label for="tel"><h3>Your Name </h3></label>
+            <input placeholder="Malcolm Gladwell" required>
+            <br>
+        
+        <form id="subscribeform" action="realtalk.html">
+            <label for="tel"><h3>Your Number</h3></label>
+            <input type="tel" id="phone" name="phone" placeholder="000 000 0000" required>
+            <br>
+            
+            <label for="tags">Tags</label>
+            <div id="tags">
+                <input type="checkbox" value="tag1"><h3>tag1</h3><br>
+                <input type="checkbox" value="tag3">
+                <input type="checkbox" value="tag2"><h2>tag2</h2><br>
+                <input type="checkbox" value="emelia">emelia<br>
+            </div>
+            <br>
 
-	lib.betsyp['realhack-princeton']['@dev'].subscribe({phone:phone, tags:selectedTags}, function(err, result){
-		console.log("result: "+result);
-	});
+            <!--<input type="submit" value="Subscribe">
+            <button class="mybutton">Success</button>-->
+            <input type ="submit" class="myButton" value="Subscribe" />
+ 
+        </form>
+        
+		<br>
+		<div class="col-sm-8 col-sm-offset-2">
+			<span class="c-span">Your design will be judged by a panel of teachers, alumni, and students on three criteria:</span>
+			<ul>
+				<li><span class="larger">Originality</span><br>Have you managed to turn your inspiration into a thoughtful and novel idea?</li>
+				<br>
+				<li><span class="larger">Clarity</span><br>Does your design clearly improve upon the main components of your object?</li>
+				<br>
+				<li><span class="larger">Artistic Style</span><br>How does the artistic interpretation of your design fit with its central idea? Your drawing does not have to be an intricate masterpiece of it to reflect your overall goal.</li>
+			</ul>
 
-	alert( "subscribing for tags:\n"+selectedTags);
-});
+    <script>
 
-</script>
+    $( "#subscribeform" ).submit(function( event ) {
+        // event.preventDefault();
 
-</html>
+        var phone = $('input[name=phone]').val();
+
+        var selectedTags = [];
+        $('#tags input:checked').each(function(){
+          selectedTags.push($(this).val());
+        });
+
+        lib.betsyp['realhack-princeton']['@dev'].subscribe({phone:phone, tags:selectedTags}, function(err, result){
+            console.log("result: "+result);
+        });
+
+        alert( "subscribing for tags:\n"+selectedTags);
+    });
+
+    </script>
+    
+	<!-- Footer -->
+	<footer>
+		<div class="container text-center">
+			<!--<p>Copyright <i class="this is a footer"></i> Find out more on our dev post!</p> -->
+		</div>
+	</footer>
